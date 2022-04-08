@@ -4,6 +4,7 @@ $(document).ready(function () {
         var hour = $(this).parent().attr("id");
 
         localStorage.setItem(hour, entry);
+        location.reload();
     })
 });
 console.log(localStorage);
