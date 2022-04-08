@@ -1,6 +1,9 @@
-var timeblocks = document.getElementById("timeblocks");
-var timeDisplayEl = document.getElementById('currentDay');
-var saveBtn = $(".saveBtn");
+$(document).ready(function () {
+    $(".saveBtn").on("click", function () {
+        var entry = $(this).siblings(".textarea").val();
+        var hour = $(this).parent().attr("id");
 
-function saveEntry() {
-}
+        localStorage.setItem(hour, entry);
+    })
+});
+console.log(localStorage);
